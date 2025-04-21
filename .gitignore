@@ -1,0 +1,14 @@
+frontend/node_modules
+frontend/build
+
+
+backend/db.json
+backend/venv
+
+ai-food-detection/object-storage-keys.json
+
+.vscode
+/node_modules
+
+__pycache__
+
