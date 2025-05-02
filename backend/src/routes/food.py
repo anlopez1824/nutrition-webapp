@@ -10,13 +10,13 @@ from src.utils import getFileStorageURL
 from src.config.db import ConsumedFood, session
 from src.middleware.jwt import token_required
 from src.constants import AI_SERVICE_ENDPOINT, DAY_OF_WEEK
-from src.config.firebase import upload_image_to_firebase
+from src.config.bucket import upload_image_to_s3
 food = Blueprint('food', __name__, url_prefix='/api/food')
 
 
 @food.post('/capture-food')
-#@token_required
-def capture_food():
+@token_required
+def capture_food(current_user):
     try:
 
         if not request.files:
@@ -32,8 +32,10 @@ def capture_food():
 
         # Upload image to ibm object storage and get image public url
         #upload_image_to_firebase(filename, filepath)
+        upload_image_to_s3(filename, filepath)
         # send image url to identify food item using ai food detection service
         image_url = getFileStorageURL(filename)
+        print(f"image_url {image_url}")
         foodItemsResponse = requests.post(AI_SERVICE_ENDPOINT+'/clarifai/detect-food', json={
             'image_url': image_url
         })

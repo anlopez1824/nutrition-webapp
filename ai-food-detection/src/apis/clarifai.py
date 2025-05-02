@@ -20,8 +20,8 @@ def detectFood():
                 {
                     "data": {
                         "image": {
-                            "url": "https://image.cnbcfm.com/api/v1/image/107417438-1716234749013-Vital_Pursuit_Whole_Grain_Bowl_Garlic_Herb_Grilled_Chicken_Bowl.jpg?v=1716256596&w=1480&h=833&ffmt=webp&vtcrop=y"
-                            #"url": imageUrl
+                            #"url": "https://image.cnbcfm.com/api/v1/image/107417438-1716234749013-Vital_Pursuit_Whole_Grain_Bowl_Garlic_Herb_Grilled_Chicken_Bowl.jpg?v=1716256596&w=1480&h=833&ffmt=webp&vtcrop=y"
+                            "url": imageUrl
                         }
                     }
                 }

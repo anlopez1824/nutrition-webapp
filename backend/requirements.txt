@@ -8,3 +8,4 @@ sqlalchemy
 psycopg2
 Flask==2.3.3
 Werkzeug==2.3.8
+boto3

@@ -1,6 +1,7 @@
 
 def getFileStorageURL(filename):
-    return f'https://firebasestorage.googleapis.com/v0/b/nutricheck-app.appspot.com/o/images%2F{filename}?alt=media'
+    return f'https://nutrition-food-images.s3.us-east-1.amazonaws.com/images/{filename}'
+    #return f'https://firebasestorage.googleapis.com/v0/b/nutricheck-app.appspot.com/o/images%2F{filename}?alt=media'
 
 
 def calorieCalculator(w, h, age, gender, activity):
